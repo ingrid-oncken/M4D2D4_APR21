@@ -1,42 +1,23 @@
-import {
-  Button,
-  Form,
-  FormControl,
-  Navbar,
-  Nav,
-  NavDropdown,
-} from "react-bootstrap"
+import { Button, Form, FormControl, Navbar, Nav } from "react-bootstrap"
 
 const MyNav = () => (
-  <Navbar bg="light" expand="lg">
-    <Navbar.Brand href="#">Weenie Bookstore</Navbar.Brand>
-    <Navbar.Toggle aria-controls="navbarScroll" />
-    <Navbar.Collapse id="navbarScroll">
-      <Nav
-        className="mr-auto my-2 my-lg-0"
-        style={{ maxHeight: "100px" }}
-        navbarScroll
-      >
-        <Nav.Link href="#action1">Home</Nav.Link>
-        <Nav.Link href="#action2">About</Nav.Link>
-        <NavDropdown title="Link" id="navbarScrollingDropdown">
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="#action5">
-            Something else here
-          </NavDropdown.Item>
-        </NavDropdown>
-        <Nav.Link href="#" disabled>
-          Link
+  <Navbar className="text-white" bg="success" expand="lg">
+    <Navbar.Brand className="text-white" href="#home">
+      Weenie Bookshop
+    </Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="mr-auto">
+        <Nav.Link className="text-white" href="#home">
+          Home
+        </Nav.Link>
+        <Nav.Link className="text-white" href="#link">
+          About
         </Nav.Link>
       </Nav>
-      <Form className="d-flex">
-        <FormControl
-          type="search"
-          placeholder="Search"
-          className="mr-2"
-          aria-label="Search"
-        />
-        <Button variant="outline-success">Search</Button>
+      <Form inline>
+        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+        <Button variant="outline-success">Browse</Button>
       </Form>
     </Navbar.Collapse>
   </Navbar>
