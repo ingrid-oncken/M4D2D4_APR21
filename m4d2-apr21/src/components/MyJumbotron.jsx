@@ -1,7 +1,7 @@
 import { Jumbotron } from "react-bootstrap"
 
 const MyJumbotron = (props) => (
-  <Jumbotron className="text-center">
+  <Jumbotron className="text-center mt-5">
     <div>
       <p>
         <h1>{props.title}</h1>

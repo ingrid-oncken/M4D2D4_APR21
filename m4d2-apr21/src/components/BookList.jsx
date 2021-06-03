@@ -16,7 +16,7 @@ class BookList extends React.Component {
               <FormControl
                 type="text"
                 placeholder="Search"
-                className="mr-sm-2"
+                className="mr-sm-2 my-3"
                 value={this.state.searchQuery}
                 onChange={(e) => this.setState({ searchQuery: e.target.value })}
               />
@@ -25,11 +25,15 @@ class BookList extends React.Component {
           </Col>
         </Row>
         <Row className="d-flex flex-wrap">
-          {this.books.map((index) => (
-            <Col xs={3}>
-              <SingleBook book={index} />
-            </Col>
-          ))}
+          {this.props.books
+            .filter((index) =>
+              index.title.toLowerCase().includes(this.state.searchQuery)
+            )
+            .map((index) => (
+              <Col xs={3} className="my-2">
+                <SingleBook book={index} />
+              </Col>
+            ))}
         </Row>
       </Container>
     )
