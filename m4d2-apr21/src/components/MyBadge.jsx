@@ -1,9 +1,9 @@
 import {Badge} from 'react-bootstrap'
-import { propTypes } from 'react-bootstrap/esm/Image'
 
-const MyBadge = () => {
+
+const MyBadge = (props) => {
   return(
-    <Badge variant={props.color}>{prop.text}</Badge> 
+    <Badge variant={props.color}>{props.text}</Badge> 
   )
 }
 export default MyBadge

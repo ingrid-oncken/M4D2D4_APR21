@@ -12,16 +12,12 @@ const MyFooter = () => {
             <ul className="list-unstyled">
               <li>Loren loren</li>
               <li>Loren loren</li>
-              <li>Loren loren</li>
-              <li>Loren loren</li>
             </ul>
           </div>
           {/* column 2 */}
           <div className="col-sm-6 col-md-3">
             <h4>loren ipsum </h4>
             <ul className="list-unstyled">
-              <li>Loren loren</li>
-              <li>Loren loren</li>
               <li>Loren loren</li>
               <li>Loren loren</li>
             </ul>
@@ -32,16 +28,12 @@ const MyFooter = () => {
             <ul className="list-unstyled">
               <li>Loren loren</li>
               <li>Loren loren</li>
-              <li>Loren loren</li>
-              <li>Loren loren</li>
             </ul>
           </div>
           {/* column 4 */}
           <div className="col-sm-6 col-md-3">
             <h4>loren ipsum </h4>
             <ul className="list-unstyled">
-              <li>Loren loren</li>
-              <li>Loren loren</li>
               <li>Loren loren</li>
               <li>Loren loren</li>
             </ul>
