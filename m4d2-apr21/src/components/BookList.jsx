@@ -10,22 +10,9 @@ class BookList extends React.Component {
   render() {
     return (
       <Container>
-        <Row>
-          <Col>
-            <Form inline>
-              <FormControl
-                type="text"
-                placeholder="Search"
-                className="mr-sm-2 my-3"
-                value={this.state.searchQuery}
-                onChange={(e) => this.setState({ searchQuery: e.target.value })}
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
-          </Col>
-        </Row>
         <Row className="d-flex flex-wrap">
-          {this.props.books
+          {
+          this.props.books
             .filter((index) =>
               index.title.toLowerCase().includes(this.state.searchQuery)
             )
