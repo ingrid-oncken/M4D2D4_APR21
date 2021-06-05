@@ -1,5 +1,6 @@
 import SingleBook from "./SingleBook"
 import React from "react"
+import { Book } from "react-bootstrap-icons"
 import { Button, Col, Container, Form, FormControl, Row } from "react-bootstrap"
 
 class BookList extends React.Component {
@@ -10,9 +11,25 @@ class BookList extends React.Component {
   render() {
     return (
       <Container>
+        <Row>
+          <Form inline>
+            {this.props.books.filter((index) =>
+              index.title.toLowerCase().includes(this.state.searchQuery)
+            )}
+            <Button variant="link">
+              <Book color="white" size={30} />
+            </Button>
+            <FormControl
+              type="text"
+              placeholder="Search"
+              className="mr-sm-2"
+              value={this.state.searchQuery}
+              onChange={(e) => this.setState({ searchQuery: e.target.value })}
+            />
+          </Form>
+        </Row>
         <Row className="d-flex flex-wrap">
-          {
-          this.props.books
+          {this.props.books
             .filter((index) =>
               index.title.toLowerCase().includes(this.state.searchQuery)
             )

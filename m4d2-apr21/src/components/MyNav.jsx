@@ -1,5 +1,5 @@
 import { Button, Form, FormControl, Navbar, Nav } from "react-bootstrap"
-import { Book } from "react-bootstrap-icons"
+// import { Book } from "react-bootstrap-icons"
 import React from "react"
 
 class MyNav extends React.Component {
@@ -23,11 +23,11 @@ class MyNav extends React.Component {
               About
             </Nav.Link>
           </Nav>
-          <Form inline>
+          {/* <Form inline> */}
             {/* {this.props.books.filter((index) =>
               index.title.toLowerCase().includes(this.state.searchQuery)
             )} */}
-            <Button variant="link">
+            {/* <Button variant="link">
               <Book color="white" size={30} />
             </Button>
             <FormControl
@@ -37,7 +37,7 @@ class MyNav extends React.Component {
               value={this.state.searchQuery}
               onChange={(e) => this.setState({ searchQuery: e.target.value })}
             />
-          </Form>
+          </Form> */}
         </Navbar.Collapse>
       </Navbar>
     )
